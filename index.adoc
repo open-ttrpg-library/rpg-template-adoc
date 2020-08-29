@@ -1,0 +1,31 @@
+= RPG Template
+Chris L. Barnes <chrislloydbarnes@gmail.com>
+:toc: left
+:!player-only:
+
+Once upon a time...
+
+== Introduction
+
+This is a chapter.
+
+== Rules
+
+Players roll a six-sided die.
+The highest roll wins!
+
+ifndef::player-only[]
+
+== Game Master rules
+
+Actually, the person with the best voice acting may win.
+
+endif::player-only[]
+
+:leveloffset: +1
+
+include::CREDITS.adoc[]
+
+include::LICENSE.adoc[]
+
+:leveloffset: -1

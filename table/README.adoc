@@ -1,0 +1,6 @@
+== table directory
+
+Tables for inclusion in the document.
+
+Consider tab separated values (`.tsv`) for simple content as it is highly portable and human-readable.
+For more complicated formatting needs, use asciidoctor's built-in https://asciidoctor.org/docs/user-manual/#tables[table format].

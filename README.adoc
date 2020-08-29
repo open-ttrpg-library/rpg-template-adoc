@@ -1,0 +1,3 @@
+= rpg-template-adoc
+
+A template for writing content similar to RPG source books using [asciidoctor](https://asciidoctor.org/).

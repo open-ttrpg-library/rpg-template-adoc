@@ -1,0 +1,4 @@
+= Credits
+
+.Asciidoctor template
+- Chris L. Barnes
