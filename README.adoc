@@ -19,5 +19,6 @@ If you have a more deeply nested document structure, you may want more of these 
 
 In a thriving open source ecosystem, you may want to include other works within your own - for example, base rule systems, settings, or optional modules on which your source book is based.
 Use git submodules to add such works to the `submodule/` directory, and then `include` them from there, making sure to abide by the terms of their license.
+This ensures that you refer to a specific revision of the work, that it is easy to find, and that output styles can be consistent.
 
 Always include a `LICENSE.adoc` with your work if you would like it to be accessible to others.
