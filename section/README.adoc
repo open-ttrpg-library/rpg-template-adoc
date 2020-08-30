@@ -1,4 +1,4 @@
-= chapter directory
+= section directory
 
 Keep asciidoctor content in here if you do not want a monolithic top-level `index.adoc`.
 If there are multiple subdirectories, consider keeping an `index.adoc` in each one to allow an entire directory's ordered content to be ``include``d at once.
