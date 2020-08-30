@@ -1,3 +1,23 @@
 = rpg-template-adoc
 
 A template for writing content similar to RPG source books using https://asciidoctor.org/[asciidoctor].
+
+== Usage
+
+https://asciidoctor.org/#installation[Install the asciidoctor toolchain] as appropriate for your operating system.
+
+The command for basic compilation command is `asciidoctor index.adoc -o build/index.html`.
+View `build/index.html` in a web browser, or host it on a static site.
+
+See the https://asciidoctor.org/docs/asciidoc-writers-guide/[AsciiDoc Writer's Guide], or for more details on the syntax, the https://asciidoctor.org/docs/user-manual/[User Manual].
+
+It can be convenient to split your document down into files corresponding to sections.
+These files can go into the `section/` directory and be included in `index.adoc` with an https://asciidoctor.org/docs/user-manual/#include-directive[include directive].
+
+Tables and images can be kept in their respective directories, and added with an `include` or https://asciidoctor.org/docs/user-manual/#images[image directive].
+If you have a more deeply nested document structure, you may want more of these directories, associated with each section/ subsection etc.
+
+In a thriving open source ecosystem, you may want to include other works within your own - for example, base rule systems, settings, or optional modules on which your source book is based.
+Use git submodules to add such works to the `submodule/` directory, and then `include` them from there, making sure to abide by the terms of their license.
+
+Always include a `LICENSE.adoc` with your work if you would like it to be accessible to others.
