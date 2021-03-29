@@ -13,3 +13,6 @@ indent_style = space
 
 [*.tsv]
 indent_style = tab
+
+[*.rb]
+indent_size = 2

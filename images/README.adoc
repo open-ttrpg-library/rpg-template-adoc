@@ -1,5 +1,5 @@
-== image directory
+= image directory
 
-For images to be included in the document.
+For images to be included in the document with the https://docs.asciidoctor.org/asciidoc/latest/macros/images/[image directive].
 
 Where possible (logos, vector art etc.), consider keeping images in text-based format like SVG to make it possible for git to track their changes.

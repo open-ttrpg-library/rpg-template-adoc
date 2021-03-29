@@ -1,0 +1,9 @@
+= imports directory
+
+Directory for content from external dependencies (base rule systems, additional modules) included as https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules].
+
+In a thriving open source ecosystem, you may want to include other works within your own - for example, base rule systems, settings, or optional modules on which your source book is based.
+Use https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to add such works to the `imports/` directory, and then `include` them from there, making sure to abide by the terms of their license.
+This ensures that you refer to a specific revision of the work, that it is easy to find, and that output styles can be consistent.
+
+Note that these external projects may set some variables which affect your own document following their inclusion (e.g. `:imagesdir:`).

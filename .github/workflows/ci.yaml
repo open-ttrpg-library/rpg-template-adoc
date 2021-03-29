@@ -1,0 +1,41 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - uses: actions/cache@v2
+      with:
+        path: .bundle/gems
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - run: bundle install --jobs 4 --retry 3
+    - run: bundle exec rake
+      name: Build documents
+
+    - name: Deploy to GH pages
+      if: github.event_name == 'push' && (github.branch == 'master' || github.branch == 'main')
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages
+        folder: build/html
+    - run: zip -r build/html.zip build/html
+    - name: Make GH release if tagged
+      if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          build/html.zip
+          build/index.*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
