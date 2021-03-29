@@ -2,6 +2,16 @@
 
 A template for writing content similar to RPG source books using https://asciidoctor.org/[asciidoctor].
 
+== This repo
+
+This repository contains all the boilerplate you need for
+
+* Installing the asciidoctor toolchain in a cross-platform way
+  * Add to `./Gemfile` if you need additional extensions
+* Building an asciidoctor document out of component parts
+  * Modify `./Rakefile.rb` to customise thise
+* Automatically deploying the output as a web page to https://pages.github.com/[Github Pages], as well as releasing PDFs and epubs on github
+
 == Usage
 
 Install https://www.ruby-lang.org/en/documentation/installation/[Ruby] and https://bundler.io/[Bundler].
