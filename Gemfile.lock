@@ -45,8 +45,6 @@ GEM
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
-    prawn-gmagick (0.0.9)
-      prawn (>= 0.15, < 3.0)
     prawn-icon (2.5.0)
       prawn (>= 1.1.0, < 3.0.0)
     prawn-svg (0.31.0)
@@ -75,7 +73,6 @@ DEPENDENCIES
   asciidoctor
   asciidoctor-epub3
   asciidoctor-pdf
-  prawn-gmagick
   rake
 
 BUNDLED WITH
