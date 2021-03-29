@@ -1,3 +1,0 @@
-# submodule directory
-
-Directory for content from external dependencies (base rule systems, additional modules) included as https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules].

@@ -1,0 +1,19 @@
+= table directory
+
+Tables for inclusion in the document.
+
+Consider tab separated values (`.tsv`) for simple content as it is highly portable and human-readable, and can be https://docs.asciidoctor.org/asciidoc/latest/tables/data-format/[included directly].
+For more complicated formatting needs, use asciidoctor's built-in https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/[table format].
+
+A TSV table inclusion may look like
+
+[source,asciidoctor]
+----
+
+.My table title
+[format=tsv]
+|===
+include::tables/some_table.tsv
+|===
+
+----
