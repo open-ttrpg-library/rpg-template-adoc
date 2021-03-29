@@ -24,8 +24,8 @@ jobs:
       name: Build documents
     - run: echo "BRANCH=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
       name: Extract branch name
-    - name: Deploy to GH pages
-      if: ${{ env.BRANCH }} == 'master' ||  ${{ env.BRANCH }} == 'main'
+    - name: Deploy to GH pages if tagged
+      if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
