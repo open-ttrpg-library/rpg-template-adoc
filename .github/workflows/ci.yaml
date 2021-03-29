@@ -24,7 +24,7 @@ jobs:
       name: Build documents
 
     - name: Deploy to GH pages
-      if: github.event_name == 'push' && github.branch == $default-branch
+      if: github.event_name == 'push' && (github.branch == master || github.branch == main)
       uses: JamesIves/github-pages-deploy-action@v4.1.0
       with:
         branch: gh-pages
