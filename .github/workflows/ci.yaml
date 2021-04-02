@@ -22,13 +22,16 @@ jobs:
       with:
         branch: gh-pages
         folder: build/html
-    - run: zip -r build/html.zip build/html
+    - name: Compress HTML artifacts
+      run: |
+        zip -r build/html.zip build/html
+        tar cf - build/html/ | xz -z - > build/html.tar.xz
     - name: Make GH release if tagged
       if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          build/html.zip
+          build/html.*
           build/index.*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
