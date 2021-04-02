@@ -10,7 +10,7 @@ This repository contains all the boilerplate you need for
   * Add to `./Gemfile` if you need additional extensions
 * Building an asciidoctor document out of component parts
   * Modify `./Rakefile.rb` to customise thise
-* Automatically deploying the output as a web page to https://pages.github.com/[Github Pages], as well as releasing PDFs and epubs on github
+* Automatically deploying the output as a web page to https://pages.github.com/[Github Pages], as well as releasing PDFs and epubs through GitHub
 
 == Usage
 
@@ -37,6 +37,10 @@ include::tables/README.adoc[]
 
 include::imports/README.adoc[]
 
+The resulting artifacts have a directory too:
+
+include::build/README.adoc[]
+
 :leveloffset: -2
 
-Always include a `LICENSE.adoc` with your work if you would like it to be accessible to others.
+Always include a `LICENSE.adoc` with your product if you would like it to be accessible to others.
